@@ -45,14 +45,14 @@ const page = ({params}) => {
         <h1 className='my-8 text-[26px] font-semibold'>Introduction:</h1>
         <p>{data.description}</p>
         <h3 className='my-5 text-[18px] font-semibold'>Step:1 Welcome to our Blog writing, hope you guys are enjoying it.</h3>
-        <p className='my-5 '>Doing blogging. Read it out.</p>
-        <p className='my-5 '>Doing blogging. Read it out.</p>
+        <p className='my-5 '>Blogging done.Read it out.</p>
+        <p className='my-5 '>Blogging done.Read it out.</p>
         <h3 className='my-5 text-[18px] font-semibold'>Step:2 Welcome to our Blog writing, hope you guys are enjoying it.</h3>
-        <p className='my-5 '>Doing blogging. Read it out.</p>
-        <p className='my-5 '>Doing blogging. Read it out.</p>
+        <p className='my-5 '>Blogging done.Read it out.</p>
+        <p className='my-5 '>Blogging done.Read it out.</p>
         <h3 className='my-5 text-[18px] font-semibold'>Step:3 Welcome to our Blog writing, hope you guys are enjoying it.</h3>
-        <p className='my-5 '>Doing blogging. Read it out.</p>
-        <p className='my-5 '>Doing blogging. Read it out.</p>
+        <p className='my-5 '>Blogging done.Read it out.</p>
+        <p className='my-5 '>Blogging done.Read it out.</p>
         <h3 className='my-5 text-[18px] font-semibold'> Conclusion</h3>
         <p className='my-5 '>Hope you guys loved it.</p>
         <div className='my-24 '>
