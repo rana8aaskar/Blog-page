@@ -1,7 +1,7 @@
 import { assets } from "@/Assets/assets";
 
 import Image from "next/image";
-import Sidebar from "../AdminComponents/Sidebar";
+import Sidebar from "../../components/AdminComponents/Sidebar";
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
