@@ -3,7 +3,7 @@ import BlogModel from "@/lib/models/BlogModel";
 import { NextResponse } from "next/server";
 import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-
+const fs = require('fs');
 // MongoDB connection logic
 const connectDB = async () => {
     try {
@@ -77,4 +77,13 @@ export async function POST(request) {
         console.error("Error in POST request:", error);
         return NextResponse.json({ success: false, msg: "Error adding blog" });
     }
+}
+
+// creating Api endpoint to delete blog
+export async function DELETE(request){
+    const id =await request.nextUrl.searchParams.get('id');
+    const blog = await BlogModel.findById(id);
+    fs.unlink(`./public${blog.image}`,()=>{});
+    await BlogModel.findByIdAndDelete(id);
+    return NextResponse.json({msg:"Blog Deleted"}) 
 }
