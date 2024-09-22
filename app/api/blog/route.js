@@ -22,28 +22,19 @@ const connectDB = async () => {
 
 // API Endpoint to Get All Blogs
 export async function GET(request) {
-    await connectDB(); // Ensure DB connection
-
     const blogId = request.nextUrl.searchParams.get("id");
 
-    try {
-        if (blogId) {
-            // If blogId is present, find blog by ID
-            const blog = await BlogModel.findById(blogId);
-            if (!blog) {
-                return NextResponse.json({ success: false, msg: "Blog not found" });
-            }
-            return NextResponse.json({ success: true, blog });
-        } else {
-            // If no blogId, fetch all blogs
-            const blogs = await BlogModel.find({});
-            return NextResponse.json({ success: true, blogs });
-        }
-    } catch (error) {
-        console.error("Error in GET request:", error);
-        return NextResponse.json({ success: false, msg: "Error fetching blogs" });
+    if(blogId){
+        const blog = await BlogModel.findById(blogId);
+        return NextResponse.json(blog)
+
+    }
+    else{
+        const blogs = await BlogModel.find({});
+        return NextResponse.json({blogs})
     }
 }
+
 
 // API Endpoint for Uploading Blogs
 export async function POST(request) {
